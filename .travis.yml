@@ -2,6 +2,6 @@ sudo: required
 services:
     - docker
 before_install:
-    - "docker build -t tajpouria/docker-travis-test -f Dockerfile.dev ."
+    - docker build -t tajpouria/docker-travis-test -f Dockerfile.dev .
 script:
-    - "docker run tajpouria/docker-travis-test npm run test -- --coverage --forceExit"
+    - docker run tajpouria/docker-travis-test npm run test -- --coverage 
