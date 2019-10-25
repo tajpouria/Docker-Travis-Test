@@ -4,4 +4,4 @@ services:
 before_install:
     - docker build -t tajpouria/docker-travis-test -f Dockerfile.dev .
 script:
-    - docker run tajpouria/docker-travis-test npm run test -- --coverage 
+    - docker run tajpouria/docker-travis-test npm run test -- --watchAll=false
